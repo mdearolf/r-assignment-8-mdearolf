@@ -1,6 +1,6 @@
 ---
 title: "R Exercises Session 8"
-author: "Introduction to R for Data Management and Analysis"
+author: "Michelle Dearolf" 
 output: word_document
 ---
 
@@ -23,10 +23,19 @@ Check your work by knitting the document.
 
 1. Create a level 2 header below in Markdown with the name "Answer 1".
 
+## Answer 1
+
 
 2. Add an unordered Markdown list of your favorite food dishes and
-add their ingredients as sub-items in the list. You should enter at least two
-dishes with two ingredients each.
+add their ingredients as sub-items in the list. You should enter at least two dishes with two ingredients each.
+- pizza
+  - dough
+  - cheese
+  - sauce
+- fruit salad
+  - strawberry
+  - blueberry
+  - grapes
 
 
 3. Insert an R code chunk below. Show the `summary` of the `Orange` dataset.
@@ -34,9 +43,19 @@ Run a linear regression using the `lm` function to predict `circumference` from
 `age` and assign the result. Show the `summary` of the fit object that you
 assigned.
 
+```{r}
+data("Orange")
+summary(Orange)
+lm(circumference~age, data=Orange)
+AgeByCircumference <- lm(circumference~age, data=Orange)
+summary(AgeByCircumference)
 
-4. Add an RMarkdown weblink (in link format) below to your favorite R reference
-website.
+```
+
+    
+4. Add an RMarkdown weblink (in link format) below to your favorite R reference website.
+
+[Useful R Reference Site](https://www.statology.org/r-guides/ "Statology")
 
 
 5. Replace the author field in the `yaml` header with your name and then
